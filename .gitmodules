@@ -1,0 +1,6 @@
+[submodule "catalogodiscos-production"]
+	path = catalogodiscos-production
+	url = https://github.com/oliveiragustavo/catalogodiscos-production.git
+[submodule "catalogodiscos-backend"]
+	path = catalogodiscos-backend
+	url = https://github.com/oliveiragustavo/catalogodiscos-backend.git

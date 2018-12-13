@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+    front:
+        build:
+            dockerfile: ./Dockerfile
+            context: ./catalogodiscos-production
+        image: front
+        container_name: front
+        ports:
+            - "8080:8080"
+        networks: 
+            - production-network
+
+    back:
+        build:
+            dockerfile: ./Dockerfile
+            context: ./catalogodiscos-backend
+        image: back
+        container_name: back
+        ports:
+            - "8000:8000"
+        networks: 
+            - production-network
+
+networks: 
+    production-network:
+        driver: bridge
