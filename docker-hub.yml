@@ -2,11 +2,19 @@ version: "3.1"
 
 services:
   catalogodiscos:
-    image: oliveiragustavo/front-production:1.0
+    image: oliveiragustavo/front-production:2.0
     ports:
-    - "8080:8080"
+      - "8080:8080"
+    networks: 
+      - production-network
 
   catalogodiscosback:
-    image: oliveiragustavo/back-production:1.0
+    image: oliveiragustavo/back-production:2.0
     ports:
-    - "8000:8000"
+      - "8000:8000"
+    networks: 
+      - production-network
+
+networks: 
+  production-network:
+    driver: bridge
