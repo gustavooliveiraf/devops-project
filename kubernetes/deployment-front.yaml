@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: catalogo-deployment-front
+spec:
+  template:
+    metadata:
+      labels:
+       name: catalogo-pods-front
+    spec:
+      containers:
+        - name: container-catalogo-front
+          image: oliveiragustavo/front-production:3.0
+          ports:
+           - containerPort: 8080
+

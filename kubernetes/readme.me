@@ -1,0 +1,5 @@
+minikube start
+kubectl config use-context minikube
+kubectl create -f ~.yaml
+kubectl scale deployment nameDeployment --replicas=x
+minikube service servico-aplicacao --url

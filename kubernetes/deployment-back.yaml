@@ -1,0 +1,15 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: catalogo-deployment-back
+spec:
+  template:
+    metadata:
+      labels:
+       name: catalogo-pods-back
+    spec:
+      containers:
+        - name: container-catalogo-back
+          image: oliveiragustavo/back-production:3.0
+          ports:
+           - containerPort: 8000

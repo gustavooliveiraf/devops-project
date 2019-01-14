@@ -2,14 +2,14 @@ version: "3.1"
 
 services:
   catalogodiscos:
-    image: oliveiragustavo/front-production:2.0
+    image: oliveiragustavo/front-production:3.0
     ports:
       - "8080:8080"
     networks: 
       - production-network
 
   catalogodiscosback:
-    image: oliveiragustavo/back-production:2.0
+    image: oliveiragustavo/back-production:3.0
     ports:
       - "8000:8000"
     networks: 
